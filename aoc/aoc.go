@@ -14,6 +14,14 @@ func ReadInput(file string) string {
 	return string(b)
 }
 
+func ReadLines(file string) []string {
+	b, err := ioutil.ReadFile(file)
+	if err != nil {
+		return nil
+	}
+	return strings.Split(string(b), "\n")
+}
+
 func InputAsInts(file string, sep string) []int {
 	input := ReadInput(file)
 	parts := strings.Split(input, sep)

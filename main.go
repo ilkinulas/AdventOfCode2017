@@ -9,6 +9,7 @@ import (
 	"github.com/ilkinulas/aoc2017/day04"
 	"github.com/ilkinulas/aoc2017/day05"
 	"github.com/ilkinulas/aoc2017/day06"
+	"github.com/ilkinulas/aoc2017/day07"
 )
 
 func main() {
@@ -18,4 +19,5 @@ func main() {
 	fmt.Println(day04.Solution())
 	fmt.Println(day05.Solution())
 	fmt.Println(day06.Solution())
+	fmt.Println(day07.Solution())
 }

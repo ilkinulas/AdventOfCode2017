@@ -14,6 +14,7 @@ import (
 	"github.com/ilkinulas/aoc2017/day09"
 	"github.com/ilkinulas/aoc2017/day10"
 	"github.com/ilkinulas/aoc2017/day11"
+	"github.com/ilkinulas/aoc2017/day12"
 )
 
 func TestDay01(t *testing.T) {
@@ -80,6 +81,13 @@ func TestDay11(t *testing.T) {
 	assertEqual(t, 743, part1)
 	assertEqual(t, 1493, part2)
 }
+
+func TestDay12(t *testing.T) {
+	part1, part2 := day12.Solution()
+	assertEqual(t, 175, part1)
+	assertEqual(t, 213, part2)
+}
+
 func assertEqual(t *testing.T, expected interface{}, value interface{}) {
 	if expected == value {
 		return

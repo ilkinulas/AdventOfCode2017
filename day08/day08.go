@@ -8,7 +8,7 @@ import (
 
 //TODO parse input without regex. try using fmt.Sscanf
 func Solution() (int, int) {
-	re, _ := regexp.Compile("([a-z]+) (inc|dec) (-?[0-9]+) if ([a-z]+) (([<>=!]){1,2}) (-?[0-9]+)")
+	re := regexp.MustCompile("([a-z]+) (inc|dec) (-?[0-9]+) if ([a-z]+) (([<>=!]){1,2}) (-?[0-9]+)")
 	lines := aoc.ReadLines("day08/input.txt")
 	var expressions []*expr
 	for _, line := range lines {

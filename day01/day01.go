@@ -4,10 +4,10 @@ import "github.com/ilkinulas/aoc2017/aoc"
 
 func Solution() (int, int) {
 	input := aoc.ReadInput("day01/input.txt")
-	return sum(input, 1), sum(input, len(input)/2)
+	return Sum(input, 1), Sum(input, len(input)/2)
 }
 
-func sum(digits string, nextDigitOffset int) int {
+func Sum(digits string, nextDigitOffset int) int {
 	length := len(digits)
 	sum := 0
 	for i := 0; i < length; i++ {

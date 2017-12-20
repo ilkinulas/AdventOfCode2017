@@ -12,6 +12,8 @@ import (
 	"github.com/ilkinulas/aoc2017/day07"
 	"github.com/ilkinulas/aoc2017/day08"
 	"github.com/ilkinulas/aoc2017/day09"
+	"github.com/ilkinulas/aoc2017/day10"
+	"github.com/ilkinulas/aoc2017/day11"
 )
 
 func main() {
@@ -24,4 +26,6 @@ func main() {
 	fmt.Println(day07.Solution())
 	fmt.Println(day08.Solution())
 	fmt.Println(day09.Solution())
+	fmt.Println(day10.Solution())
+	fmt.Println(day11.Solution())
 }

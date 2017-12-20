@@ -19,7 +19,7 @@ type program struct {
 
 func Solution() (string, int) {
 	lines := aoc.ReadLines("day07/input.txt")
-	re, _ := regexp.Compile("([a-z]+) \\(([0-9]+)\\)( -> (.*)){0,1}")
+	re := regexp.MustCompile("([a-z]+) \\(([0-9]+)\\)( -> (.*)){0,1}")
 	programMap := make(map[string]*program)
 	for _, line := range lines {
 		program := newProgram(line, re)

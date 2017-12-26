@@ -1,9 +1,9 @@
 package day11
 
 import (
-	"strings"
-	"math"
 	"github.com/ilkinulas/aoc2017/aoc"
+	"math"
+	"strings"
 )
 
 func Solution() (int, int) {

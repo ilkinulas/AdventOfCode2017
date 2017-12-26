@@ -1,8 +1,8 @@
 package day08
 
 import (
-	"regexp"
 	"github.com/ilkinulas/aoc2017/aoc"
+	"regexp"
 	"strconv"
 )
 
@@ -32,19 +32,19 @@ type expr struct {
 
 func solve(exprs []*expr) (int, int) {
 	regs := make(map[string]int)
-	tmpMax:=0
+	tmpMax := 0
 	for _, expr := range exprs {
 		if expr.condition.eval(regs) {
-			value:=regs[expr.variable] + expr.amount
+			value := regs[expr.variable] + expr.amount
 			regs[expr.variable] = value
-			if value>tmpMax {
-				tmpMax=value
+			if value > tmpMax {
+				tmpMax = value
 			}
 		}
 	}
-	max:=0
-	for _, v:=range regs {
-		if v>max {
+	max := 0
+	for _, v := range regs {
+		if v > max {
 			max = v
 		}
 	}

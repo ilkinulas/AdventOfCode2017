@@ -1,7 +1,6 @@
 package main
 
 import (
-	"testing"
 	"fmt"
 	"github.com/ilkinulas/aoc2017/day01"
 	"github.com/ilkinulas/aoc2017/day02"
@@ -15,6 +14,8 @@ import (
 	"github.com/ilkinulas/aoc2017/day10"
 	"github.com/ilkinulas/aoc2017/day11"
 	"github.com/ilkinulas/aoc2017/day12"
+	"testing"
+	"github.com/ilkinulas/aoc2017/day13"
 )
 
 func TestDay01(t *testing.T) {
@@ -86,6 +87,12 @@ func TestDay12(t *testing.T) {
 	part1, part2 := day12.Solution()
 	assertEqual(t, 175, part1)
 	assertEqual(t, 213, part2)
+}
+
+func TestDay13(t *testing.T) {
+	part1, part2 := day13.Solution()
+	assertEqual(t, 1876, part1)
+	assertEqual(t, 3964778, part2)
 }
 
 func assertEqual(t *testing.T, expected interface{}, value interface{}) {

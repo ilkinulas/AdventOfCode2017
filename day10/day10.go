@@ -1,9 +1,9 @@
 package day10
 
 import (
-	"strings"
-	"strconv"
 	"fmt"
+	"strconv"
+	"strings"
 )
 
 func Solution() (int, string) {
@@ -58,10 +58,10 @@ func solvePart2(s string) string {
 	}
 
 	var hash []string
-	for i:= range xors {
+	for i := range xors {
 		hash = append(hash, fmt.Sprintf("%02x", xors[i]))
 	}
-	return strings.Join(hash,"")
+	return strings.Join(hash, "")
 }
 
 func xor(ints []int) int {

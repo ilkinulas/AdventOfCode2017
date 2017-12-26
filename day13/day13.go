@@ -16,25 +16,28 @@ type Firewall struct {
 }
 
 func (f *Firewall) severity() (severity int) {
-	for d, r := range f.data {
-		if caught(r, d) {
-			severity += d * r
+	for depth, iRange := range f.data {
+		if caught(iRange, depth) {
+			severity += depth * iRange
 		}
 	}
 	return severity
 }
 
 func (f *Firewall) packetDelay() (delay int) {
-scan:
-	for {
-		for d, r := range f.data {
-			if caught(r, d+delay) {
-				delay++
-				continue scan
-			}
-		}
-		return delay
+	for f.caughtWhilePassingThrough(delay) {
+		delay++
 	}
+	return delay
+}
+
+func (f*Firewall) caughtWhilePassingThrough(delay int) bool {
+	for depth, iRange := range f.data {
+		if caught(iRange, depth+delay) {
+			return true
+		}
+	}
+	return false
 }
 
 func caught(sRange int, delay int) bool {
